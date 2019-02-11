@@ -1,0 +1,54 @@
+body{
+	margin:0;
+	background-color: #160A1E;
+}
+
+@media only screen and (min-width :0px){
+.grid-container{
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-areas: "logo" "temperature" "water" "velocity" "age";
+}
+
+.grid-item{
+	display: flex;
+	background-color: #f3f3f3;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.logo{
+	background-color: #160A1E;
+	height: 100px;
+}
+
+.temperature{
+	height: 150px;
+}
+
+.water{
+	height: 250px;
+}
+
+.velocity{
+	height: 400px;
+}
+
+.age{
+	height: 450px;
+}
+}
+
+@media only screen and (min-width: 1024px){
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:"logo logo"
+						"temperature age"
+						"water age"
+						"velocity velocity"
+}
+
+	
+	
+}
