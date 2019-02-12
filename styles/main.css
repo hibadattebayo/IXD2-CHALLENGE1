@@ -11,21 +11,8 @@ p{
 	font-family: PT sans;
     color: #5F4B66;
 	margin: 0 auto;
-}
-
-#chart_wrap {
-    position: relative;
-    padding-bottom: 100%;
-    /*height: 0;*/
-    overflow:hidden;
-}
-
-#piechart {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-    height:90%;
+	margin-top: 4%;
+	vertical-align: middle;
 }
 
 @media only screen and (min-width:0px){
@@ -49,7 +36,6 @@ p{
 
 .logo{
 	background-color: #160A1E;
-	height: 150px;
 	grid-area: logo;
 	grid-column: 1/3;
 	margin: 0;
@@ -96,6 +82,22 @@ h2{
 }
 
 @media only screen and (min-width:1024px){
+#chart_wrap {
+    position: relative;
+    padding-bottom: 70%;
+    /*height: 0;*/
+    overflow:hidden;
+}
+
+#piechart {
+	display: inline-block;
+	margin: 0 auto;
+    position: absolute;
+    /*top: 0;
+    left: 0;*/
+    height:100%;
+}
+
 .grid-container{
 	display: grid;
 	grid-template-columns: 50% 50%;

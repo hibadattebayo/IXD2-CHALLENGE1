@@ -3,9 +3,8 @@ window.onload = function () {
 
 		var dps = []; // dataPoints
 		var chart = new CanvasJS.Chart("chartContainer", {
-			axisY: {
-				includeZero: false
-			},      
+			backgroundColor: "transparent",
+			/*width: 700,*/
 			data: [{
 				type: "line",
 				dataPoints: dps,
@@ -68,7 +67,11 @@ google.charts.setOnLoadCallback(drawChart);
     var options = {
         colors: ['#A71D31', '#6A679E', '#5F4B66'],
 		backgroundColor: { fill:'transparent' },
-		fontName: 'PT sans'
+		fontName: 'PT sans',
+		//This hides the legend
+		legend:'none',
+		//This centers the chart!! v
+		chartArea:{left:10,top:20,width:"100%",height:"100%"}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
