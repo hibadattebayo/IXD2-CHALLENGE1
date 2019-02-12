@@ -1,54 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 body{
 	margin:0;
 	background-color: #160A1E;
 }
 
-@media only screen and (min-width :0px){
+p{
+	font-size: 18px;
+	font-family: PT sans;
+    color: #5F4B66;
+	margin: 0 auto;
+}
+
+#chart_wrap {
+    position: relative;
+    padding-bottom: 100%;
+    /*height: 0;*/
+    overflow:hidden;
+}
+
+#piechart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:90%;
+}
+
+@media only screen and (min-width:0px){
 .grid-container{
 	display:grid;
 	grid-template-columns:1fr;
-	grid-template-areas: "logo" "temperature" "water" "velocity" "age";
+	grid-template-areas: "logo" "temperature" "water" "velocity" "gender";
+}
+
+.grid-item{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	/*justify-content: center;*/
+	text-align: center;
+	background-color: #f3f3f3;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
+
+.logo{
+	background-color: #160A1E;
+	height: 150px;
+	grid-area: logo;
+	grid-column: 1/3;
+	margin: 0;
+}
+
+h1{
+	color: #5F4B66;
+	font-size: 64px;
+	font-family: do hyeon;
+	margin: 0 auto;
+}
+
+h2{
+	color: white;
+	font-size: 64px;
+	font-family: do hyeon;
+	margin: 0 auto;
+}
+
+.temperature{
+	height: auto;
+	grid-area: temperature;
+	text-align: center;
+}
+
+.cloud{
+	width: 10%;
+}
+
+.water{
+	height: auto;
+	grid-area: water;
+}
+
+.velocity{
+	height: auto;
+	grid-area: velocity;
+}
+
+.gender{
+	height: auto;
+	grid-area: gender;
+}
+}
+
+@media only screen and (min-width:1024px){
+.grid-container{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas:"logo logo"
+						"temperature gender"
+						"water gender"
+						"velocity velocity"
 }
 
 .grid-item{
 	display: flex;
 	background-color: #f3f3f3;
-	margin-left: 5%;
-	margin-right: 5%;
+	margin: 3%;
 }
 
 .logo{
 	background-color: #160A1E;
-	height: 100px;
+	grid-area: logo;
+	height: 50px;
 }
 
 .temperature{
-	height: 150px;
+	height: auto;
+	grid-area: temperature;
 }
 
 .water{
-	height: 250px;
+	height: auto;
+	grid-area: water;
 }
 
 .velocity{
-	height: 400px;
+	height: auto;
+	margin: 1.5%; 	
+	grid-area: velocity;
 }
 
-.age{
-	height: 450px;
-}
-}
-
-@media only screen and (min-width: 1024px){
-.grid-container{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-areas:"logo logo"
-						"temperature age"
-						"water age"
-						"velocity velocity"
-}
-
+.gender{
+	height: auto;
+	grid-area: gender;
+}	
 	
+}
+
+@media only screen and (min-width:1366px){
 	
 }
