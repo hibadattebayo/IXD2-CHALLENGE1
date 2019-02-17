@@ -15,11 +15,34 @@ p{
 	vertical-align: middle;
 }
 
-@media only screen and (min-width:0px){
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding: 10px;
+  color: white;
+}
+
+.veggies {width: 91%; background-color: #A71D31;}
+.fr00t {width: 85%; background-color: #6A679E;}
+.bars {width: 77%; background-color: #5F4B66;}
+.pasta {width: 60%; background-color: #f88e56;}
+
+#chart_wrap {
+    display:flex;
+	flex-direction:column;
+	align-items: center;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
 .grid-container{
 	display:grid;
 	grid-template-columns:1fr;
-	grid-template-areas: "logo" "temperature" "water" "velocity" "gender";
+	grid-template-areas: "logo" "temperature" "water" "velocity" "food";
 }
 
 .grid-item{
@@ -46,7 +69,7 @@ h1{
 	font-size: 64px;
 	font-family: do hyeon;
 	margin: 0 auto;
-	font-weight: 200pt;
+	font-weight: lighter;
 }
 
 h2{
@@ -76,35 +99,24 @@ h2{
 	grid-area: velocity;
 }
 
-.gender{
+.food{
 	height: auto;
-	grid-area: gender;
+	grid-area: food;
 }
-}
+
 
 @media only screen and (min-width:1024px){
 #chart_wrap {
-    position: relative;
-    padding-bottom: 70%;
-    /*height: 0;*/
-    overflow:hidden;
+	padding-bottom: 0;
 }
 
-#piechart {
-	display: inline-block;
-	margin: 0 auto;
-    position: absolute;
-    /*top: 0;
-    left: 0;*/
-    height:100%;
-}
 
 .grid-container{
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-areas:"logo logo"
-						"temperature gender"
-						"water gender"
+						"temperature food"
+						"water food"
 						"velocity velocity"
 }
 
@@ -136,9 +148,9 @@ h2{
 	grid-area: velocity;
 }
 
-.gender{
+.food{
 	height: auto;
-	grid-area: gender;
+	grid-area: food;
 }	
 	
 }

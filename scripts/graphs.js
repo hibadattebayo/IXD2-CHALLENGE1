@@ -8,8 +8,8 @@ window.onload = function () {
 			data: [{
 				type: "line",
 				dataPoints: dps,
-				lineColor: "#f88e56",
-				markerColor: "#f88e56",
+				lineColor: "#6A679E",
+				markerColor: "#6A679E",
 				lineThickness: "4",
 			}]
 		});
@@ -40,46 +40,15 @@ window.onload = function () {
 				
 			}
 			
-			chart.render();
-			
+			chart.render();	
 		};
-		
-
-		
 		updateChart(dataLength);
 		setInterval(function(){updateChart()}, updateInterval);
+}
 
-		}
-		
-// Pie chart JS code
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Women', 51],
-        ['Men', 40],
-        ['Other', 12]
-    ]);
-
-    var options = {
-        colors: ['#A71D31', '#6A679E', '#5F4B66'],
-		backgroundColor: { fill:'transparent' },
-		fontName: 'PT sans',
-		//This hides the legend
-		legend:'none',
-		//This centers the chart!! v
-		chartArea:{left:10,top:20,width:"100%",height:"100%"}
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
-    }
-	
+//COUNTDOWN CLOCK Js code	
 // Set the date we're counting down to
+//I set the date to 2019 because if I set it to 2030 It would count from todays date, and if I would set two vast dates the timer wouldn't be dynamic
 var countDownDate = new Date("Dec 28, 2019 03:19:97").getTime();
 
 // Update the count down every 1 second
