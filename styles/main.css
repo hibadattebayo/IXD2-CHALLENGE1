@@ -32,11 +32,9 @@ p{
 .pasta {width: 60%; background-color: #f88e56;}
 
 #chart_wrap {
-    display:flex;
-	flex-direction:column;
-	align-items: center;
 	padding-left: 5%;
 	padding-right: 5%;
+	padding-bottom: 5%;
 }
 
 .grid-container{
@@ -66,7 +64,7 @@ p{
 
 h1{
 	color: #5F4B66;
-	font-size: 64px;
+	font-size: 45px;
 	font-family: do hyeon;
 	margin: 0 auto;
 	font-weight: lighter;
@@ -83,6 +81,7 @@ h2{
 	height: auto;
 	grid-area: temperature;
 	text-align: center;
+	
 }
 
 .cloud{
@@ -106,11 +105,6 @@ h2{
 
 
 @media only screen and (min-width:1024px){
-#chart_wrap {
-	padding-bottom: 0;
-}
-
-
 .grid-container{
 	display: grid;
 	grid-template-columns: 50% 50%;
